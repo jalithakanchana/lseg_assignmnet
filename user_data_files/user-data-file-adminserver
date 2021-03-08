@@ -1,0 +1,3 @@
+#!/bin/bash
+echo " ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDw3OttqmHfxSCx182efPac+VZl19IioIitw0CFYGF9D/38jJntBMSoZ3aG4YLyVdq+V7nFWC5xR7ECxyFvLq3DkQN55Cq3nWoP4LeNxuC0effHlotIk3Pk7TKdU5pu3/zBENgnEMekugRX7nH3qFN7NseTTA9KN2407DdrcBNJpw0ijgp7txcY8ealzaHqPHZvyL8/57BbYjNbm3VAHqANsXbyN7Qc1SuTXqchHAWOf3sy6mCrnlxzIgQWhGBeqFIyubdEkcjAWNBf+sdTQYViwFO9BT+2mHfSFwe7JK0XEMd8pJC2OxbCJAMGd1FIS0Q8DDYP9Jr+amO88CCxLxvR lg_user" >> /home/ec2-user/.ssh/authorized_keys
+yum -y install git

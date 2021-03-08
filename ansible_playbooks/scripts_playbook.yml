@@ -1,0 +1,26 @@
+---
+- name: deploy scripts to admin server
+  hosts:  admin
+  remote_user: ec2-user
+  become: no
+  tasks:
+     -  name: 
+        command: git clone https://github.com/jalithakanchana/lseg_assignmnet.git
+        args:
+          chdir:  /home/ec2-user/
+        ignore_errors: yes
+
+     -  name: Copy file to home
+        command:  cp -r /home/ec2-user/lseg_assignmnet/bash_scripts/. /home/ec2-user/
+
+     -  name: Run main_1.sh script
+        command:  sh /home/ec2-user/main_1.sh
+
+     -  name: Run main_2.sh script
+        command:  sh /home/ec2-user/main_2.sh
+
+#    - name: clone the repo
+#      git:
+#        repo: 'https://github.com/jalithakanchana/lseg_assignmnet.git'
+#        dest: /home/ec2-user/
+        

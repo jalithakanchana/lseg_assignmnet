@@ -1,0 +1,10 @@
+---
+- name: install pre-requirities on webserver
+  hosts:  admin
+  remote_user: ec2-user
+  become: yes
+  tasks:
+    - name:
+      copy:
+        src: /Users/jalitha/Documents/keys/lseg.pem 
+        dest: /home/ec2-user/lseg

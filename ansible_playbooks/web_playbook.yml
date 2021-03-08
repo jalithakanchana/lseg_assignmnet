@@ -1,0 +1,21 @@
+---
+- name: host apache
+  hosts:  server1
+  remote_user: ec2-user
+  become: yes
+  tasks:
+    - name: install apache
+      yum:
+        name: httpd
+        state:  present
+
+    - name: insert content
+      copy:
+        content:  Hello World
+        dest: /var/www/html/index.html
+
+    - name: start service
+      service:
+        name: httpd
+        state:  started
+                       
